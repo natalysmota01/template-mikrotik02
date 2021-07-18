@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Nataly S. Mota">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Empresa especializada em prover internet.">
+	<meta name="keywords" content="Provedor, Provedor de Internet, Internet Banda Larga">
+	<title>Empresa - Início</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+</head>
+<style type="text/css">
+	* {margin: 0; padding: 0; border: none; box-sizing: border-box;}
+	a {text-decoration: none;}
+
+	/*======== HEADER ========*/
+	.header-top {width: 100%; float: left; background-image: url(img/wallpaper.jpg); background-repeat: no-repeat; background-size: cover;
+					background-position: center; border-top: 30px solid #5D478B;}
+	.header-top .header {width: 100%; float: left; padding: 15px 0;}
+	.header-top .header .logotipo {width: 180px; margin-left: 5%;}
+	.header-top .header .logotipo img {width: 100%;}
+
+	/*======== LOGIN AREA ========*/
+	.header-top .login-area {width: 100%; float: left; padding: 50px 0 100px 0;}
+	.header-top .login-area header {text-align: center; font-size: 2.8em; font-family: 'Roboto', sans-serif; font-weight: bold; color: #363636;
+									margin-bottom: 50px;}
+	.header-top .login-area .tbl-login {width: 90%; border: 1px solid #CCC; margin: 0 auto; padding: 20px 10px ; border-radius: 5px;
+										background-color: #FFF;}
+	.header-top .login-area .tbl-login tr td form {width: 100%;}
+	.header-top .login-area .tbl-login tr td form table {width: 100%;}
+	.header-top .login-area .tbl-login tr td form table tr td {width: 100%; font-family: 'Roboto', sans-serif; display: block;}
+	.header-top .login-area .tbl-login tr td form table tr td input {width: 100%; padding: 10px 0 10px 5px; border: 1px solid #CCC; margin-top: 5px;
+																		font-size: .9em; color: #4F4F4F;}
+	.header-top .login-area .tbl-login tr td form table tr td input[type="submit"] {width: 100%; background-color: #5D478B; color: #FFF;
+																					font-size: 1em; font-family: 'Roboto', sans-serif;
+																					border: none;}
+	.header-top .login-area .tbl-login tr td form table tr td input[type="submit"]:hover {background-color: rgb(104, 80, 156); cursor: pointer;}
+	.header-top .login-area .tbl-login tr td a img {border: none; margin-top: 20px;}
+
+	/*======== PRICES AREA ========*/
+	.prices-area {width: 100%; float: left; padding: 100px 0; background-color: rgb(233, 233, 233); font-family: 'Roboto', sans-serif;
+					text-align: center;}
+	.prices-area .tbl-prices {width: 90%; float: left; margin: 0 5%;}
+	.prices-area .tbl-prices header {font-size: 2.5em; color: #4F4F4F; font-family: 'Arial', sans-serif; font-weight: bold;}
+	.prices-area .tbl-prices .plan {width: 100%; float: left; background-color: #FFF; margin-top: 50px;}
+	.prices-area .tbl-prices .plan .type-plan {width: 100%; float: left; padding: 30px 0; text-align: center; font-size: 2.3em; color: #9C9C9C;
+												text-transform: uppercase;}
+	.prices-area .tbl-prices .plan .informations {width: 100%; float: left; padding-bottom: 40px;}
+	.prices-area .tbl-prices .plan .informations p {padding: 8px 0;}
+	.prices-area .tbl-prices .plan .price-plan {width: 100%; float: left; padding: 30px 0; background-color: #8B668B; font-size: 2.5em;
+													color: #FFF;}
+	.prices-area .tbl-prices .plan .price-plan span {font-size: .5em;}
+	.prices-area .tbl-prices .plan .btn-select {width: 100%; float: left; padding: 20px 0;}
+	.prices-area .tbl-prices .plan .btn-select a {width: 130px; background-color: #828282; display: block; padding: 8px 0; margin: 0 auto;
+													color: #FFF; text-transform: uppercase; font-size: 1.2em; text-align: center;}
+	.prices-area .tbl-prices .plan .btn-select a:hover {background-color: #9C9C9C;}
+
+	/*======== ADDRESS AREA ========*/
+	#address-area {width: 100%; float: left; background-image: url(img/wallpaper2.jpg); background-position: center; background-attachment: fixed; background-size: cover; padding: 100px 0;}
+	#address-area header {text-align: center; font-size: 3.5em; color: #FFF; font-family: 'Arial', sans-serif; font-weight: bold;
+							text-transform: uppercase;}
+	#address-area p {text-align: center; font-family: 'Roboto', sans-serif; color: #FFF; margin-top: 20px; font-size: 1.1em; color: #E8E8E8;}
+	#address-area .address {width: 80%; margin: 50px auto 0 auto; background-color: rgba(0, 0, 0, .3); padding: 2% 2%;}
+	#address-area .address span, #address-area .schedules span {font-family: 'Roboto', sans-serif; font-size: 1.1em; color: #E8E8E8;
+																text-decoration: underline;}
+	#address-area .address p, #address-area .schedules p, a {color: #E8E8E8; font-family: 'Roboto', sans-serif; font-size: 1em; text-align: left;
+																margin: 0; line-height: 30px;}
+	#address-area .schedules {width: 80%; margin: 10px auto 0 auto; background-color: rgba(0, 0, 0, .3); padding: 2% 2%;}
+
+	/*======== GOOGLE MAPS ========*/
+	.google-maps {width: 100%; float: left;}
+
+	/*======== FOOTER ========*/
+	footer {width: 100%; float: left; background-color: #1C1C1C; padding: 40px 0 10px 0;}
+	footer .networking {width: 130px; margin: 0 auto; text-align: center;}
+	footer .networking img {width: 24px; margin: 0 5px;}
+	footer .copyright {padding-top: 20px;}
+	footer .copyright p {text-align: center; color: #4F4F4F; font-family: 'Arial', sans-serif; font-size: .9em;}
+
+	/*======== RESPONSIVE ========*/
+	@media screen and (min-width: 480px) {
+		.header-top .login-area .tbl-login {width: 420px;}
+		.header-top .login-area .tbl-login {padding: 20px;}
+	}
+	@media screen and (min-width: 680px) {
+		.prices-area .tbl-prices {width: 100%; margin: 0;}
+		.prices-area .tbl-prices .plan {width: 46%; margin: 50px 0 0 2.8%;}
+	}
+	@media screen and (min-width: 768px) {
+		#address-area .address {width: 40%; float: left; margin-left: 5%;}
+		#address-area .schedules {width: 40%; float: right; margin: 50px 5% 0 0;}
+	}
+	@media screen and (min-width: 980px) {
+		.prices-area .tbl-prices .plan {width: 23%; margin: 50px 0 0 1.6%;}
+	}
+</style>
+<body>
+
+	$(if chap-id)
+		<form name="sendin" action="$(link-login-only)" method="post">
+			<input type="hidden" name="username" />
+			<input type="hidden" name="password" />
+			<input type="hidden" name="dst" value="$(link-orig)" />
+			<input type="hidden" name="popup" value="true" />
+		</form>
+		
+		<script type="text/javascript" src="/md5.js"></script>
+		<script type="text/javascript">
+		<!--
+		    function doLogin() {
+			document.sendin.username.value = document.login.username.value;
+			document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+			document.sendin.submit();
+			return false;
+			}
+		//-->
+		</script>
+	$(endif)
+
+	<div class="header-top">
+		<header class="header">
+			<figure class="logotipo">
+				<img src="img/logotipo.jpg" title="" alt="">
+			</figure>
+		</header>
+
+		<section class="login-area">
+			<header>Acessar</header>
+
+			<table class="tbl-login">
+				<tr>
+					<td>
+						<form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+							<input type="hidden" name="dst" value="$(link-orig)" />
+							<input type="hidden" name="popup" value="true" />
+
+							<table>
+								<tr>
+									<td><input name="username" type="text" value="$(username)" placeholder="Login" /></td>
+								</tr>
+								<tr>
+									<td><input name="password" type="password" placeholder="Senha" /></td>
+								</tr>
+								<tr>
+									<td><input type="submit" value="Entrar" /></td>
+								</tr>
+							</table>
+						</form>
+					</td>
+				</tr>
+
+				<tr><td align="center"><a href="http://www.mikrotik.com" target="_blank"><img src="img/logobottom.png" alt="mikrotik" /></a></td></tr>
+			</table>
+		</section>
+	</div>
+
+	<!-- JQUERY ROLAGEM MENU SCREEN -->
+	<script type="text/javascript">
+		jQuery(document).ready(function($) { 
+			$('.scroll').click(function(event) {        
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top}, 1400);
+			});
+		});
+	</script>
+
+	<div class="prices-area">
+		<section class="tbl-prices">
+			<header>Planos Diponíveis</header>
+
+			<article class="plan">
+				<div class="type-plan">Básico</div>
+				<div class="informations">
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+				</div>
+				<div class="price-plan">
+					R$20,00<span>/mês</span>
+				</div>
+
+				<div class="btn-select">
+					<a href="#address-area" class="scroll" title="Contratar">Contratar</a>
+				</div>
+			</article>
+
+			<article class="plan">
+				<div class="type-plan">Básico</div>
+				<div class="informations">
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+				</div>
+				<div class="price-plan">
+					R$20,00<span>/mês</span>
+				</div>
+
+				<div class="btn-select">
+					<a href="#address-area" class="scroll" title="Contratar">Contratar</a>
+				</div>
+			</article>
+
+			<article class="plan">
+				<div class="type-plan">Básico</div>
+				<div class="informations">
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+				</div>
+				<div class="price-plan">
+					R$20,00<span>/mês</span>
+				</div>
+
+				<div class="btn-select">
+					<a href=".address-area" class="scroll" title="Contratar">Contratar</a>
+				</div>
+			</article>
+
+			<article class="plan">
+				<div class="type-plan">Básico</div>
+				<div class="informations">
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+					<p>Informações sobre o plano</p>
+				</div>
+				<div class="price-plan">
+					R$20,00<span>/mês</span>
+				</div>
+
+				<div class="btn-select">
+					<a href="#address-area" class="scroll" title="Contratar">Contratar</a>
+				</div>
+			</article>
+		</section>
+	</div>
+
+	<section id="address-area">
+		<header>Contato</header>
+		<p>Entre em contato conosco. Teremos prazer em ajudá-lo a escolher o melhor plano para você!</p>
+
+		<div class="address">
+			<span>Endereço:</span>
+			<p>Rua Lorem Ipsum, 258, Bairro</p>
+			<p>Campina Grande - PB</p>
+			<p>CEP: 00000-000</p>
+		</div>
+
+		<div class="schedules">
+			<span>Horários e contato:</span>
+			<p>Segunda à sexta, das 00hrs às 00hrs</p>
+			<p>Sábado, das 00hrs às 00hrs</p>
+			<a href="tel: 00000000000" title="Tel.: (00) 0 0000-0000">Tel.: (00) 0 0000-0000</a><br/>
+			<a href="mailto:teste@teste.com" title="Email: teste@teste.com">Email: teste@teste.com</a>
+		</div>
+	</section>
+
+	<section class="google-maps">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.309849335482!2d-122.13288768406902!3d47.639545379186906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906d73904f0cf1%3A0x37aac0c0a3207155!2sMicrosoft+Way!5e0!3m2!1spt-BR!2sbr!4v1513430304349" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</section>
+
+	<footer>
+		<figure class="networking">
+			<a href="http://facebook.com/" title="Facebook Empresa">
+				<img src="img/icon-facebook.png" title="Facebook Empresa" alt="Facebook Empresa" />
+			</a>
+
+			<a href="http://instagram.com/"/" title="Instagram Empresa">
+				<img src="img/icon-instagram.png" title="Facebook Empresa" alt="Facebook Empresa" />
+			</a>
+
+			<a href="http://twitter.com/"/" title="Twitter Empresa">
+				<img src="img/icon-twitter.png" title="Facebook Empresa" alt="Facebook Empresa" />
+			</a>
+		</figure>
+
+		<div class="copyright">
+			<p>Empresa &copy; 2019 - Todos os direitos reservados</p>
+		</div>
+	</footer>
+</body>
+</html>
